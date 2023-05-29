@@ -1,17 +1,20 @@
 import { useState } from "react";
+import useBooksContext from "../hooks/use-books-context";
 
-function BookCreate({ onCreate }) {
+function BookCreate() {
   const [title, setTitle] = useState('');
+
+  const { createBook } = useBooksContext();
+
   const handleChange = (event) => {
     setTitle(event.target.value);
   };
   const handleSubmit = (event) => {
     event.preventDefault();
-    const newBook = {
-        id: Math.round(99999999 * Math.random()),
-        title,
-    };
-    onCreate(newBook);
+    // const newBook = {
+    //     title,
+    // };
+    createBook(title);
     setTitle('');
   };
   return (

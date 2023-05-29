@@ -1,0 +1,12 @@
+{
+  "books": [
+    {
+      "title": "Harry Potter",
+      "id": 2
+    },
+    {
+      "title": "Percy Jackson",
+      "id": 3
+    }
+  ]
+}
